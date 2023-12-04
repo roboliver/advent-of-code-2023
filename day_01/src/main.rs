@@ -35,7 +35,7 @@ fn calibration_value_actual(line: &str) -> u32 {
     first_digit * 10 + last_digit
 }
 
-fn matches_ordered<'a>(line: &'a str, digits: &'a Vec<Digit>,
+fn matches_ordered<'a>(line: &'a str, digits: &'a [Digit],
                          finder: fn(&'a Digit, &'a str) -> (&'a Digit, Option<usize>))
     -> Vec<(&'a Digit, usize)> {
     let mut matches: Vec<(&Digit, usize)> = digits.iter()
